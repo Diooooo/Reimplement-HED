@@ -116,3 +116,4 @@ def hed(load_model=False, file_path=None):
 
 if __name__ == "__main__":
     model = hed(True, './model/vgg16_weights.h5')
+    model.fit_generator
