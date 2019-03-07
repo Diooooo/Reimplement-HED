@@ -59,6 +59,7 @@ class DataParser:
 
             bin_edge = np.zeros_like(edge)
             bin_edge[np.where(edge)] = 1
+            bin_edge = np.expand_dims(bin_edge, axis=2)
 
             file_names.append(self.samples[idx])
             images.append(image)
@@ -68,4 +69,5 @@ class DataParser:
 
 
 if __name__ == "__main__":
-    pass
+    dataParser = DataParser(10)
+    file_names, images, edge_maps = dataParser.get_batch_data(dataParser.train_ids[:10])

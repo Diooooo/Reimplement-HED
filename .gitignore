@@ -1,3 +1,5 @@
 dataset/
 model/
 .idea/
+checkpoints/
+__pycache__/
